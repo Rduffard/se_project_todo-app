@@ -1,17 +1,22 @@
 # Simple Todo App
 
-Give a brief description of the project here. Feel free to give it a different name.
+A responsive todo list application that allows users to create, manage, and track their daily tasks. Users can add new todos with due dates, mark items as complete, and delete tasks they no longer need.
 
 ## Functionality
 
-Give a more detailed explanation of the project and its functionality.
+The functionality is addding, removing, and a clecklist.
 
 ## Technology
 
-Give a description of the technologies and techniques used. Pictures, GIFs, or screenshots that detail the project features are recommended.
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- Form validation
+- Local storage (if applicable)
+- Responsive design
 
 ## Deployment
 
 This project is deployed on GitHub Pages:
 
-- ADD LINK HERE
+- https://rduffard.github.io/se_project_todo-app/
