@@ -4,7 +4,7 @@ class Todo {
     this._templateElement = document.querySelector(templateSelector);
   }
 
-  setEventListeners() {
+  _setEventListeners() {
     this._todoCheckboxEl.addEventListener("change", () => {
       this._data.completed = !this._data.completed;
       console.log(this._data.completed);
@@ -15,7 +15,7 @@ class Todo {
     });
   }
 
-  generateDate() {
+  _generateDate() {
     const dueDate = new Date(this._data.date);
 
     if (!isNaN(dueDate)) {
@@ -27,7 +27,7 @@ class Todo {
     }
   }
 
-  generateCheckboxEl() {
+  _generateCheckboxEl() {
     this._todoCheckboxEl = this._todoElement.querySelector(".todo__completed");
     this._todoLabel = this._todoElement.querySelector(".todo__label");
 
@@ -47,9 +47,9 @@ class Todo {
 
     todoNameEl.textContent = this._data.name;
 
-    this.generateCheckboxEl();
-    this.setEventListeners();
-    this.generateDate();
+    this._generateCheckboxEl();
+    this._setEventListeners();
+    this._generateDate();
 
     return this._todoElement;
   }
