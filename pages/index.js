@@ -50,9 +50,13 @@ const section = new Section({
   containerSelector: ".todos__list",
 });
 
+function handleCheck(completed) {
+  todoCounter.updateCompleted(completed);
+}
+
 // The logic in this function should all be handled in the Todo class.
 const generateTodo = (data) => {
-  const todo = new Todo(data, "#todo-template");
+  const todo = new Todo(data, "#todo-template", handleCheck);
   const todoElement = todo.getView();
   return todoElement;
 };
