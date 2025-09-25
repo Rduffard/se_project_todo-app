@@ -6,7 +6,6 @@ class PopupWithForm extends Popup {
     this._popupForm = this._popup.querySelector(".popup__form");
     this._handleFormSubmit = handleFormSubmit;
     this._inputList = this._popupForm.querySelectorAll(".popup__input");
-    // ^ I need help with this ^
   }
 
   _getInputValues() {
@@ -17,14 +16,12 @@ class PopupWithForm extends Popup {
     return values;
   }
 
-  // ^^ I Need help with this ^^
-
   setEventListeners() {
     super.setEventListeners();
     this._popupForm.addEventListener("submit", (evt) => {
       evt.preventDefault();
       const inputValues = this._getInputValues();
-      this._handleFormSubmit(evt);
+      this._handleFormSubmit(inputValues);
     });
   }
 }

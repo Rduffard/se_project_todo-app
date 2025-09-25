@@ -17,8 +17,6 @@ const popupWithFormInstance = new PopupWithForm({
     const name = inputValues.name;
     const dateInput = inputValues.date;
 
-    // ^^ I also need help with this part ^^
-
     // Create a date object and adjust for timezone
     const date = new Date(dateInput);
     date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
@@ -33,6 +31,9 @@ const popupWithFormInstance = new PopupWithForm({
   },
 });
 
+// ^^^ Something is hppening here and I don't know what || My counter still only increments - furthermore, my name is no longer being passed into the generated form ^^^
+// For context, i used to pass the evt to the function. I was told to use values... which was already in use by my const
+
 popupWithFormInstance.setEventListeners();
 
 const renderTodo = (item) => {
@@ -41,7 +42,7 @@ const renderTodo = (item) => {
 };
 
 const section = new Section({
-  itmes: initialTodos,
+  items: initialTodos,
   renderer: renderTodo,
   containerSelector: ".todos__list",
 });
